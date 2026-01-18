@@ -1,0 +1,106 @@
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div
+    class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md"
+  >
+    <div class="modal-content border-0 rounded-4 overflow-hidden">
+      <!-- header part -->
+      <div
+        class="modal-header bg-primary text-white text-center border-0 flex-column"
+      >
+        <h3 class="font-serif fw-bold mb-3" id="formTitle">Welcome Back</h3>
+
+        <div class="d-flex gap-2">
+          <button
+            type="button"
+            class="btn btn-sm role-btn active"
+            id="btn-student"
+          >
+            <i class="bi bi-book me-1"></i> Student
+          </button>
+          <button type="button" class="btn btn-sm role-btn" id="btn-teacher">
+            <i class="bi bi-briefcase me-1"></i> Teacher
+          </button>
+        </div>
+
+        <button
+          type="button"
+          class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!-- modal body -->
+      <div class="modal-body p-4">
+        <div class="alert alert-danger d-none" id="alertErrors"></div>
+        <div class="alert alert-success d-none" id="alertSuccess"></div>
+
+        <form id="authForm" novalidate>
+          <input type="hidden" id="inputRole" name="role" value="student" />
+          <input type="hidden" id="inputMode" name="mode" value="login" />
+
+          <div class="mb-3 d-none" id="nameField">
+            <label class="form-label fw-bold small text-muted">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="fullname"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold small text-muted"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="user@hellenictech.edu.gr"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold small text-muted">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="****"
+              required
+            />
+          </div>
+
+          <div class="mb-3 d-none" id="specialCodeField">
+            <label class="form-label fw-bold small text-muted"
+              >Special Access Code</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              name="special_code"
+              placeholder="Enter access code"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 fw-bold">
+            <span id="submitBtnText">Sign In</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- footer part -->
+      <div class="modal-footer border-0 justify-content-center">
+        <p class="small text-muted mb-1" id="toggleText">
+          New to HellenicTech?
+        </p>
+        <button type="button" class="btn btn-link fw-bold p-0" id="toggleLink">
+          Apply for Access / Sign Up
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

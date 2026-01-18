@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HellenicTech University - Portal</title>
+
+    <!-- bootstrap import and icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- imports for leaflet map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <!-- general js imports -->
+
+    <script src="js/includes.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <!-- general css imports-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="bg-light">
+    <!-- import header from partials using includes.js -->
+    <div id="header"></div>
+
+    <!-- hero section -->
+    <section
+      id="home"
+      class="hero-section d-flex align-items-center position-relative"
+    >
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-2">
+        <div class="row align-items-center">
+          <div class="col-lg-7 text-white mb-5 mb-lg-0">
+            <span class="badge bg-primary border border-light mb-3 px-3 py-2">
+              Admissions Open Fall 2026
+            </span>
+
+            <h1 class="display-3 font-serif fw-bold mb-4">
+              The leading University in
+              <span class="text-warning">Greece.</span>
+            </h1>
+
+            <p class="lead mb-4 text-light opacity-75 w-75">
+              Join our community of technology, innovation and research.
+            </p>
+
+            <div class="d-flex gap-3">
+              <a
+                href="#programs"
+                class="btn btn-light btn-lg fw-bold text-primary px-4"
+              >
+                Explore Programs
+              </a>
+              <a
+                href="#campus"
+                class="btn btn-outline-warning btn-lg fw-bold px-4"
+              >
+                Visit Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- import body contents from partials using js/includes.js -->
+    <div id="programs"></div>
+    <div id="campus"></div>
+    <div id="about"></div>
+    <div id="footer"></div>
+
+    <!-- import auth modal from partials/auth_portal.html for sign up and login using js/script.js and backend/auth.php -->
+    <div id="auth"></div>
+  </body>
+</html>
